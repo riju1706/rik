@@ -243,32 +243,36 @@
     </header>
     <main
       class="main-banner"
+      <!--
       style="
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
-        text-align: center;
-        height: 100vh;
+        /* text-align: center; */
+        height: 75vh;
         background: url('/img/home.jpg') no-repeat center center/cover;
         margin-top: 80px;
       "
     >
       <!-- ==========================================home section ======================== -->
-      <div class="banner-content">
-        <h3 style="font-size: 1.2rem; margin-bottom: 10px">
+      <div class="banner-content" style="max-width: 50%; padding: 2rem">
+        <h3 style="font-size: 1.2rem; margin: 0">
           Creating Successful Results through Engineering
         </h3>
-        <h1 style="font-size: 2.5rem; font-weight: bold">
+        <p style="font-size: 4.5rem; font-weight: bold; margin: 0">
           Think: AI-Driven Digital Evolution
-        </h1>
+        </p>
       </div>
     </main>
-    <div class="section" style="padding: 50px 20px; background-color: #f9f9f9">
+    <div
+      class="section"
+      style="padding: 50px 2.6rem; background-color: #f9f9f9"
+    >
       <h2
         style="
-          font-size: 1.8rem;
+          font-size: 2.5rem;
           font-weight: bold;
-          line-height: 1.6;
+          line-height: 1.4;
           margin-bottom: 30px;
           color: black;
           text-align: center;
@@ -287,29 +291,60 @@
         style="
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
-          gap: 20px;
+          /* justify-content: center; */
+          gap: 10px;
           margin-bottom: 40px;
         "
       >
-        <div class="industry-item" style="width: 150px; text-align: center">
+        <div
+          class="industry-item"
+          style="
+            width: 16%;
+            height: 15rem;
+            background-color: red;
+            text-align: center;
+            position: relative;
+          "
+        >
           <img
             src="./img/payment.jpg"
             alt="Payments"
-            style="width: 100%; border-radius: 10px; transition: transform 0.3s"
-          />
-          <h3
             style="
-              margin-top: 10px;
+              width: 100%;
+              border-radius: 10px;
+              transition: transform 0.3s;
+              height: 15rem;
+            "
+          />
+          <div
+            style="
               font-size: 1rem;
               font-weight: 600;
               color: black;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background-color: rgba(0, 0, 0, 0.65);
+              display: flex;
+              justify-content: center;
+              align-items: center;
             "
           >
-            Payments
-          </h3>
+            <h3
+              style="
+                margin-top: 10px;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: white;
+              "
+            >
+              Payments
+            </h3>
+          </div>
         </div>
-        <div class="industry-item" style="width: 150px; text-align: center">
+        <div class="industry-item" style="width: 16%; text-align: center">
           <img
             src="./img/stock.jpg"
             alt="Capital Market"
@@ -326,9 +361,9 @@
             Capital Market
           </h3>
         </div>
-        <div class="industry-item" style="width: 150px; text-align: center">
+        <div class="industry-item" style="width: 16%; text-align: center">
           <img
-            src="./img/lending.jpg"
+            src="./img/lending.jpeg"
             alt="Lending"
             style="width: 100%; border-radius: 10px; transition: transform 0.3s"
           />
@@ -343,9 +378,9 @@
             Lending
           </h3>
         </div>
-        <div class="industry-item" style="width: 150px; text-align: center">
+        <div class="industry-item" style="width: 16%; text-align: center">
           <img
-            src="./img/planning.jpg"
+            src="./img/planning.jpeg"
             alt="Manufacturing and B2B"
             style="width: 100%; border-radius: 10px; transition: transform 0.3s"
           />
@@ -360,9 +395,9 @@
             Manufacturing and B2B
           </h3>
         </div>
-        <div class="industry-item" style="width: 150px; text-align: center">
+        <div class="industry-item" style="width: 16%; text-align: center">
           <img
-            src="./img/high_studies.jpg"
+            src="./img/high_studies.jpeg"
             alt="Higher Education"
             style="width: 100%; border-radius: 10px; transition: transform 0.3s"
           />
@@ -377,9 +412,9 @@
             Higher Education & Public Sector
           </h3>
         </div>
-        <div class="industry-item" style="width: 150px; text-align: center">
+        <div class="industry-item" style="width: 16%; text-align: center">
           <img
-            src="./img/bank.jpg"
+            src="./img/bank.jpeg"
             alt="Bank and Insurance"
             style="width: 100%; border-radius: 10px; transition: transform 0.3s"
           />
