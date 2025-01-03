@@ -2,6 +2,10 @@
   .partners-section h3 {
     margin-left: 200px;
   }
+  .full-stack-section h3,
+  .digital-product-section h3 {
+    margin-left: 200px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -13,6 +17,10 @@
   }
   .feature {
     width: calc(50% - 20px);
+  }
+  .full-stack-section h3,
+  .digital-product-section h3 {
+    margin-left: 100px;
   }
 }
 
@@ -60,12 +68,20 @@
   .service-card {
     width: calc(33.33% - 20px);
   }
+  .service-card:nth-child(1),
+  .service-card:nth-child(2),
+  .service-card:nth-child(3),
   .service-card:nth-child(4),
   .service-card:nth-child(5) {
     width: calc(50% - 20px);
   }
   .industry-item {
     width: calc(50% - 10px);
+  }
+  .full-stack-section h3,
+  .digital-product-section h3 {
+    margin-left: 0;
+    text-align: center;
   }
 }
 
@@ -110,6 +126,10 @@
   }
   .footer-section {
     margin: 10px 0;
+  }
+  .full-stack-section h3,
+  .digital-product-section h3 {
+    font-size: 1.5rem;
   }
 }
 body {
@@ -478,21 +498,13 @@ body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  margin-right: 30px;
 }
 
 .hamburger div {
   width: 25px;
   height: 3px;
   background-color: black;
-}
-
-.hamburger button {
-  display: block;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -557,7 +569,6 @@ body {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  background: #3a475e;
   color: white;
 }
 
@@ -581,7 +592,7 @@ body {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .stats-section .stat {
     flex: 1 1 calc(50% - 20px);
   }
@@ -589,7 +600,7 @@ body {
   .stats-section {
     gap: 10px;
   }
-}
+} */
 
 @media (max-width: 480px) {
   .stats-section .stat {

@@ -32,7 +32,20 @@
         .features-section {
           flex-wrap: wrap;
         }
-        .feature {
+        /* .feature {
+          width: 100%;
+        } */
+        .features-section {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+        .services-section {
+          flex-wrap: wrap;
+        }
+        .service-card {
           width: calc(50% - 20px);
         }
       }
@@ -51,8 +64,18 @@
           display: flex;
         }
         .hamburger {
+          display: flex;
+        }
+        .hamburger {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .hamburger div {
           display: block;
-          cursor: pointer;
+          width: 25px;
+          height: 3px;
+          background-color: black;
         }
         .partners-section h3 {
           margin-left: 0;
@@ -61,29 +84,31 @@
         .features-section {
           flex-wrap: wrap;
         }
-        .feature {
-          width: calc(50% - 20px);
-        }
+        /* .feature {
+          width: 300px;
+        } */
         .insights-grid {
           grid-template-columns: 1fr;
         }
         .footer-container {
           flex-direction: column;
           align-items: center;
+          justify-content: center;
         }
         .footer-section {
           margin: 20px 0;
+          text-align: center;
         }
         .services-section {
           flex-wrap: wrap;
         }
-        .service-card {
-          width: calc(33.33% - 20px);
-        }
-        .service-card:nth-child(4),
+        /* .service-card {
+          width: calc(100% - 20px);
+        } */
+        /* .service-card:nth-child(4),
         .service-card:nth-child(5) {
           width: calc(50% - 20px);
-        }
+        } */
         .industry-item {
           width: calc(50% - 10px);
         }
@@ -130,6 +155,7 @@
         }
         .footer-section {
           margin: 10px 0;
+          text-align: center;
         }
       }
 
@@ -145,6 +171,16 @@
         height: 3px;
         background-color: black;
       }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
   <body class="body">
@@ -152,63 +188,44 @@
     <header class="header">
       <div class="logo">
         <img src="./img/logo copy.png" alt="DynixaAI Logo" class="logo-img" />
-        <span>DynixaAI</span>
+        <!-- <span>DynixaAI</span> -->
       </div>
       <nav class="navbar">
         <ul class="menu">
           <li>
-            <a href="#" class="nav-link">Industries</a>
+            <a href="#industries" class="nav-link">Industries</a>
           </li>
           <li>
-            <a href="#" class="nav-link">Capabilities</a>
+            <a href="#capabilities" class="nav-link">Capabilities</a>
           </li>
           <li>
-            <a href="#" class="nav-link">Insight</a>
+            <a href="#insight" class="nav-link">Insight</a>
           </li>
           <li>
-            <a href="#" class="nav-link">About</a>
+            <a href="#about" class="nav-link">About</a>
           </li>
         </ul>
       </nav>
-      <div
-        class="hamburger"
-        style="background-color: red; width: 50px; height: 50px"
-        onclick="toggleMenu()"
-      >
+      <div class="hamburger" onclick="toggleMenu()">
         <div></div>
         <div></div>
         <div></div>
       </div>
       <a href="#" class="cta-button">Let's Talk</a>
     </header>
-    <main
-      class="main-banner"
-      style="position: relative; height: 75vh; margin-top: 80px"
-    >
-      <img
-        src="./img/home.jpg"
-        alt="Home Banner"
-        class="banner-img"
-        style="
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: -1;
-        "
-      />
-      <div
-        class="banner-content"
-        style="max-width: 50%; padding: 2rem; position: absolute; top: 27%"
-      >
-        <h3>Creating Successful Results through Engineering</h3>
+    <!-- ==============================carousel =============================================== -->
+    <main class="main-banner">
+      <img src="./img/home.jpg" alt="Home Banner" class="banner-img" />
+      <div class="banner-content">
         <p>Think: AI-Driven Digital Evolution</p>
+        <h3 class="carouselHead">
+          Creating Successful Results through Engineering
+        </h3>
       </div>
     </main>
+
     <!-- ============================================================= -->
-    <div class="section">
+    <div id="industries" class="section">
       <h2>
         <span class="highlight">DynixaAI</span> is a solutions-driven
         engineering powerhouse,
@@ -271,7 +288,7 @@
     .
     <!-- =========================Accelerate innovation with D=============================================================== -->
 
-    <div class="section2">
+    <div id="capabilities" class="section2">
       <h2>
         <span class="highlight">Accelerate</span> innovation
         <span class="highlight">with</span> Digital Transformation Services.
@@ -296,6 +313,7 @@
             </span>
             <div class="arrow">→</div>
           </div>
+
           <div class="service-card">
             <h3>AI Agents</h3>
             <p>& RAG</p>
@@ -386,7 +404,7 @@
       </div>
     </div>
     <!-- =============insite section===================================================================== -->
-    <div class="insights-section">
+    <div id="insight" class="insights-section">
       <h2 class="section-title">Insights</h2>
       <div class="insights-grid">
         <div class="insight-card">
@@ -445,14 +463,14 @@
       </div>
     </div>
     <!-- ===================================footer======================================================== -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section address-section">
+    <div id="about" class="footer">
+      <div class="footer-container" style="text-align: left">
+        <div class="footer-section">
           <h2 class="footer-logo">DynixaAI</h2>
           <p><span class="location-icon">📍</span> USA Address :</p>
           <p><span class="location-icon">📍</span> India Address :</p>
         </div>
-        <div class="footer-section industries-section">
+        <div class="footer-section">
           <ul>
             <li><strong>Industries</strong></li>
             <li>Payments</li>
@@ -463,14 +481,14 @@
             <li>Banking and Insurance</li>
           </ul>
         </div>
-        <div class="footer-section address-section">
+        <div class="footer-section">
           <ul class="about-section">
             <li><strong>About</strong></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Locations</a></li>
           </ul>
         </div>
-        <div class="footer-section insights-section">
+        <div class="footer-section">
           <ul>
             <li><strong>Insights</strong></li>
             <li><a href="#">News & Events</a></li>
@@ -491,7 +509,7 @@
           /></a>
         </div>
       </div>
-    </footer>
+    </div>
     <script>
       function toggleMenu() {
         document.querySelector(".navbar").classList.toggle("active");
